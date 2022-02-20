@@ -9,6 +9,7 @@
 plugins {
     // Apply the scala Plugin to add support for Scala.
     scala
+    antlr
 }
 
 repositories {
@@ -23,6 +24,7 @@ scala {
 dependencies {
 
     implementation("org.scala-lang:scala-library:2.12.15")
+    compileOnly("org.apache.spark:spark-hive-thriftserver_2.12:3.0.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.scalatest:scalatest_2.12:3.2.10")
